@@ -10,16 +10,13 @@ import Work from "@/components/Work";
 export default function Home() {
   return (
     <>
-      <Nav />
       <div className="flex flex-col">
         <Main />
         <Services />
         <About />
         <Work />
         <Features />
-        <Reach />
       </div>
-      <Footer />
     </>
   );
 }

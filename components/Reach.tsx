@@ -3,7 +3,12 @@
 import { Select, SelectItem, Input, Textarea, Button } from "@nextui-org/react";
 import { SVGProps, useState } from "react";
 
-export function Reach() {
+const sendEmail = async () => {
+  const response = await fetch("/api/send", { method: "GET" });
+  return response;
+};
+
+export async function Reach() {
   const [workTypes, setWorkTypes] = useState([
     "Private relocation",
     "Company relocation",
@@ -112,7 +117,14 @@ export function Reach() {
             placeholder="Your Message"
             radius="none"
           />
-          <Button className="max-w-xs" color="primary" radius="none">
+          <Button
+            className="max-w-xs"
+            onClick={async () => {
+              await sendEmail();
+            }}
+            color="primary"
+            radius="full"
+          >
             Submit Message
           </Button>
         </div>

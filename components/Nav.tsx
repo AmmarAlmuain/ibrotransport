@@ -14,28 +14,43 @@ export default function Nav() {
           <>
             <div className="px-5 top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
               <ul className="bg-coarseWool/30 backdrop-blur p-2.5 w-full">
-                <MobileNavItem name="Home" />
+                <MobileNavItem name="Home" href="/" />
                 <li className="w-full rounded-full text-white flex-col flex px-5 justify-start items-center">
                   <Accordion className="p-0" isCompact>
                     <AccordionItem
                       key="1"
                       aria-label="Services"
                       title={<span style={{ color: "white" }}>Services</span>}
-                      className="p-0"
+                      className="p-0 text-white"
                     >
                       <ul className="w-full">
-                        <MobileNavItem name="Private relocation" />
-                        <MobileNavItem name="Company relocation" />
-                        <MobileNavItem name="Transports" />
-                        <MobileNavItem name="Assembly" />
-                        <MobileNavItem name="Furniture pick-up" />
-                        <MobileNavItem name="Pack service" />
+                        <MobileNavItem
+                          name="Private relocation"
+                          href="/services/private-relocation"
+                        />
+                        <MobileNavItem
+                          name="Company relocation"
+                          href="/services/company-relocation"
+                        />
+                        <MobileNavItem name="Transports" href="/" />
+                        <MobileNavItem
+                          name="Assembly"
+                          href="/services/assembly"
+                        />
+                        <MobileNavItem
+                          name="Furniture pick-up"
+                          href="/services/furniture-pick-up"
+                        />
+                        <MobileNavItem
+                          name="Pack service"
+                          href="/services/pack-service"
+                        />
                       </ul>
                     </AccordionItem>
                   </Accordion>
                 </li>
-                <MobileNavItem name="About Us" />
-                <MobileNavItem name="Contact" />
+                <MobileNavItem name="About Us" href="/" />
+                <MobileNavItem name="Contact" href="/" />
               </ul>
             </div>
           </>
@@ -57,12 +72,27 @@ export default function Nav() {
                 <div className="w-96  absolute hidden left-0 translate-y-20 top-0 group-hover:flex -td">
                   <div className="bg-coarseWool w-full">
                     <ul className="p-2.5 w-full">
-                      <MobileNavItem name="Private relocation" />
-                      <MobileNavItem name="Company relocation" />
-                      <MobileNavItem name="Transports" />
-                      <MobileNavItem name="Assembly" />
-                      <MobileNavItem name="Furniture pick-up" />
-                      <MobileNavItem name="Pack service" />
+                      <MobileNavItem
+                        name="Private relocation"
+                        href="/services/private-relocation"
+                      />
+                      <MobileNavItem
+                        name="Company relocation"
+                        href="/services/company-relocation"
+                      />
+                      <MobileNavItem name="Transports" href="/" />
+                      <MobileNavItem
+                        name="Assembly"
+                        href="/services/assembly"
+                      />
+                      <MobileNavItem
+                        name="Furniture pick-up"
+                        href="/services/furniture-pick-up"
+                      />
+                      <MobileNavItem
+                        name="Pack service"
+                        href="/services/pack-service"
+                      />
                     </ul>
                   </div>
                 </div>
@@ -103,7 +133,7 @@ export default function Nav() {
                 <WhatsappLogo />
               </div>
               <Button
-                radius="none"
+                radius="full"
                 color="primary"
                 size="md"
                 className="text-white max-md:hidden"
@@ -111,7 +141,7 @@ export default function Nav() {
                 <Link href={"#reach"}>Request Quote</Link>
               </Button>
               <Button
-                radius="none"
+                radius="full"
                 color="primary"
                 size="sm"
                 className="text-white md:hidden"
@@ -303,12 +333,12 @@ export function DownArrowIcon(props: SVGProps<SVGSVGElement>) {
   );
 }
 
-export function MobileNavItem({ name }: { name: string }) {
+export function MobileNavItem({ name, href }: { name: string; href: string }) {
   return (
     <>
       <li className="w-full rounded-full py-2.5 px-5 justify-start items-center">
         <span className="hover:text-blueRuin text-white -td">
-          <Link href={"/"}>{name}</Link>
+          <Link href={href}>{name}</Link>
         </span>
       </li>
     </>
