@@ -24,14 +24,15 @@ export async function Reach() {
         <div className="flex flex-col justify-center items-start lg:min-w-72 w-full lg:w-96 gap-y-5">
           <div>
             <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-white/10">
-              Contact
+              Kontakt
             </span>
           </div>
-          <h1 className="text-white -h1">Get In Touch With Us</h1>
-          <p className="text-white">
-            We appreciate your interest please complete the form below and we
-            will contact you immediately to discuss your warehousing and
-            distribution, air, ocean freight or any other logistics needs.
+          <h1 className="text-white -h1">Nehmen Sie Kontakt mit uns auf</h1>
+          <p className="text-white text-sm">
+            Wir sind Ihnen dankbar für Ihre Anfrage. Bitte füllen Sie das
+            untenstehende Formular aus, und wir werden uns umgehend mit Ihnen in
+            Verbindung setzen, um über Ihre Lager- und Distributions-, Luft- und
+            Seefracht- oder andere Logistikbedürfnisse zu sprechen.
           </p>
           <div className="flex lg:flex-col gap-5 flex-wrap">
             <div className="flex justify-start items-center gap-x-5">

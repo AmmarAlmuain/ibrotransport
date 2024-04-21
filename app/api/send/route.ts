@@ -8,7 +8,7 @@ export async function GET() {
       from: "Acme <onboarding@resend.dev>",
       to: "masterofalune@gmail.com",
       subject: "Hello Ibrahim",
-      html: "<h1>Hello1 from Ammar!</h1>",
+      html: "<h1>Hello12 from Ammar!</h1>",
     });
     if (error) {
       console.log(error);

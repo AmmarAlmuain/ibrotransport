@@ -20,37 +20,37 @@ export default function Nav() {
                     <AccordionItem
                       key="1"
                       aria-label="Services"
-                      title={<span style={{ color: "white" }}>Services</span>}
+                      title={<span style={{ color: "white" }}>Leistungen</span>}
                       className="p-0 text-white"
                     >
                       <ul className="w-full">
                         <MobileNavItem
-                          name="Private relocation"
+                          name="Privatumzug"
                           href="/services/private-relocation"
                         />
                         <MobileNavItem
-                          name="Company relocation"
+                          name="Firmenumzug"
                           href="/services/company-relocation"
                         />
                         <MobileNavItem name="Transports" href="/" />
                         <MobileNavItem
-                          name="Assembly"
+                          name="Montage"
                           href="/services/assembly"
                         />
                         <MobileNavItem
-                          name="Furniture pick-up"
+                          name="Möbelabholung"
                           href="/services/furniture-pick-up"
                         />
                         <MobileNavItem
-                          name="Pack service"
+                          name="Packservice"
                           href="/services/pack-service"
                         />
                       </ul>
                     </AccordionItem>
                   </Accordion>
                 </li>
-                <MobileNavItem name="About Us" href="/" />
-                <MobileNavItem name="Contact" href="/" />
+                <MobileNavItem name="Über Uns" href="/" />
+                <MobileNavItem name="Kontakt" href="/" />
               </ul>
             </div>
           </>
@@ -64,7 +64,7 @@ export default function Nav() {
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
               <li className="px-2.5 relative h-full -center group">
                 <div className="w-full flex justify-around text-white items-center gap-x-2">
-                  <Link href={"/"}>Services</Link>
+                  <Link href={"/"}>Leistungen</Link>
                   <span className="group-hover:rotate-180 duration-300 transition-all">
                     <DownArrowIcon />
                   </span>
@@ -73,24 +73,21 @@ export default function Nav() {
                   <div className="bg-coarseWool w-full">
                     <ul className="p-2.5 w-full">
                       <MobileNavItem
-                        name="Private relocation"
+                        name="Privatumzug"
                         href="/services/private-relocation"
                       />
                       <MobileNavItem
-                        name="Company relocation"
+                        name="Firmenumzug"
                         href="/services/company-relocation"
                       />
                       <MobileNavItem name="Transports" href="/" />
+                      <MobileNavItem name="Montage" href="/services/assembly" />
                       <MobileNavItem
-                        name="Assembly"
-                        href="/services/assembly"
-                      />
-                      <MobileNavItem
-                        name="Furniture pick-up"
+                        name="Möbelabholung"
                         href="/services/furniture-pick-up"
                       />
                       <MobileNavItem
-                        name="Pack service"
+                        name="Packservice"
                         href="/services/pack-service"
                       />
                     </ul>
@@ -98,9 +95,9 @@ export default function Nav() {
                 </div>
               </li>
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
-              <NavItem name="About Us" />
+              <NavItem name="Über Uns" />
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
-              <NavItem name="Contact" />
+              <NavItem name="Kontakt" />
             </ul>
             <div className="lg:hidden w-full">
               <div>
@@ -138,7 +135,7 @@ export default function Nav() {
                 size="md"
                 className="text-white max-md:hidden"
               >
-                <Link href={"#reach"}>Request Quote</Link>
+                <Link href={"#reach"}>Terminbuchung</Link>
               </Button>
               <Button
                 radius="full"
@@ -146,7 +143,7 @@ export default function Nav() {
                 size="sm"
                 className="text-white md:hidden"
               >
-                <Link href={"#reach"}>Request Quote</Link>
+                <Link href={"#reach"}>Terminbuchung</Link>
               </Button>
             </div>
           </div>

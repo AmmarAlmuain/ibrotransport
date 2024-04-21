@@ -19,17 +19,26 @@ export default function Features() {
           </div>
         </div>
         <div className="w-full min-h-screen max-xl:p-20 bg-gray-100 -center">
-          <div className="max-w-xl h-full flex flex-col justify-center items-start gap-y-5">
+          <div className="max-w-xl pl-5 h-full flex flex-col justify-center items-start gap-y-5">
             <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/20">
-              Why Choose
+              Unsere Vorteile
             </span>
-            <h1 className="-h1">
-              We Create An Opportunity To Reach Business Potential
+            <h1 className="text-[34px] font-bold">
+              Wir sind hier, um Ihnen zu dienen
             </h1>
-            <p className="font-light">
-              Logistics is a distinguished supply chain management firm which
-              provides comprehensive solutions for warehousing, transportation
-              and a host of logistics services.
+            <p className="font-light text-sm">
+              Durch die Auswahl eines professionellen und zuverlässigen
+              Transportunternehmens stellen Sie die Sicherheit und
+              Unversehrtheit Ihrer Sendungen sicher und entlasten sich von
+              Arbeitsbelastungen und Sorgen. Wählen Sie daher ein Unternehmen,
+              auf das Sie sich verlassen können. Wählen Sie uns.
+            </p>
+            <p className="font-light text-sm">
+              Ob Sie Ihre Fracht innerhalb der Stadt oder darüber hinaus
+              transportieren müssen, wir sind hier, um Ihre Bedürfnisse zu
+              erfüllen. Kontaktieren Sie uns noch heute, um Ihre Anforderungen
+              zu besprechen, und wir werden die passenden Lösungen für Sie
+              bereitstellen.
             </p>
             <div className="flex gap-x-10 max-sm:flex-col gap-y-5">
               <div className="flex flex-col gap-y-5">

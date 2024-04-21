@@ -8,18 +8,18 @@ export default function Work() {
   return (
     <>
       <section className="-section h-full gap-y-10 flex flex-col justify-center items-center">
-        <h1 className="-h1 text-center">Transporting Across The World</h1>
+        <h1 className="-h1 text-center">Transport in ganz Österreich</h1>
         <div className="flex gap-x-5 gap-y-5 justify-start max-sm:justify-center flex-wrap">
-          <Card img={germany} name="Germany" />
-          <Card img={germany} name="Germany" />
-          <Card img={germany} name="Germany" />
-          <Card img={germany} name="Germany" />
-          <Card img={germany} name="Germany" />
+          <Card img={germany} name="Linz" />
+          <Card img={germany} name="Salzburg" />
+          <Card img={germany} name="Vienna" />
+          <Card img={germany} name="Graz" />
+          <Card img={germany} name="Innsbruck" />
         </div>
       </section>
       <div className="h-[40vh] pt-10 -center bg-gray-100 -mt-40 w-full">
         <Button className="w-full max-w-xs" color="primary" radius="none">
-          Learn More
+          Lern mehr
         </Button>
       </div>
     </>
@@ -35,10 +35,12 @@ export function Card({ img, name }: { img: StaticImageData; name: string }) {
         className="object-cover w-full h-full"
       />
       <div className="absolute flex-col flex pb-5 pr-5 pl-5">
-        <span className="text-white font-medium text-2xl z-10">
-          Services to
+        <span className="text-white font-medium z-10">
+          Unsere Leistungen in
         </span>
-        <span className="text-blue-500 font-medium z-10">{name} Country</span>
+        <span className="text-blue-500 text-lg font-medium z-10">
+          {name} Stadt
+        </span>
       </div>
     </div>
   );

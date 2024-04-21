@@ -7,36 +7,57 @@ export default function Services() {
   return (
     <>
       <section className="-section -center">
-        <div className="max-w-7xl max-lg:flex-col max-lg:mt-0 mt-20 flex gap-10 justify-between items-start">
+        <div className="max-w-7xl max-lg:flex-col max-lg:mt-0 mt-20 flex gap-16 justify-between items-start">
           <div className="w-full max-w-xs flex flex-col gap-y-5 items-start">
             <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/20">
-              What We Do
+              Unsere Leistungen
             </span>
-            <h1 className="-h1">Safe & Reliable Cargo Solutions</h1>
+            <h1 className="font-bold text-[30px]">
+              Effiziente und sichere Transportlösungen
+            </h1>
           </div>
-          <div className="flex flex-col gap-y-10">
+          <div className="flex flex-col gap-y-16">
             <div className="flex gap-x-16 max-md:flex-col max-md:gap-y-5">
+              <div className="flex justify-start max-sm:flex-col max-sm:gap-y-5 items-start w-full max-w-96 h-full">
+                <div className="flex-col -center">
+                  <div>{<BoxIcon />}</div>
+                  <div className="flex">
+                    <div>{<BoxIcon />}</div>
+                    <div>{<BoxIcon />}</div>
+                  </div>
+                </div>
+                <div className="h-24 max-sm:hidden">
+                  <Divider orientation="vertical" className="mx-5" />
+                </div>
+                <div className="flex flex-col gap-y-2.5">
+                  <h1 className="text-xl font-medium -td hover:text-blueRuin cursor-pointer">
+                    Firmentransport
+                  </h1>
+                  <p>
+                    Wir transportieren Ihre Güter vom Firmenstandort zum
+                    Zielort, den Sie erreichen möchten. Wir transportieren Ihre
+                    Güter österreichweit Mit uns garantieren Sie Schnelligkeit
+                    und Zugangssicherheit
+                  </p>
+                </div>
+              </div>
+
               <Card
-                comp={<BoatIcon />}
-                name="Sea Transport Services"
-                description="Wherever your cargo is going, we can arrange the shipment for you and remain competitive with the business market."
-              />
-              <Card
-                comp={<HousesIcon />}
-                name="Warehousing Services"
-                description="We have buildings that can provide you with distribution, storage, inventory management, order fulfilment services."
+                comp={<TruckIcon />}
+                name="Privat transport"
+                description="Wir transportieren Ihre Sachen von zu Hause zum gewünschten Zielort. Wir transportieren Ihre Güter österreichweit Mit uns garantieren Sie Schnelligkeit und Zugangssicherheit"
               />
             </div>
             <div className="flex gap-x-16 max-md:flex-col max-md:gap-y-5">
               <Card
-                comp={<FlightIcon />}
-                name="Air Fright Services"
-                description="We're partners with airlines and freight forwarders to offer seamless air freight solutions to the clients all over the world."
+                comp={<BuildingIcon />}
+                name="Firmenumzug"
+                description="Wir transportieren die Firmenmöbel und alles, was Sie brauchen, an Ihren neuen Standort. Wir ziehen Ihr Unternehmen österreichweit um Mit uns garantieren Sie Schnelligkeit und Zugangssicherheit"
               />
               <Card
-                comp={<TruckIcon />}
-                name="Local Shipping Services"
-                description="We work close with strategic partners to ensure our domestic trucking offers clients everything they need in their place."
+                comp={<HousesIcon />}
+                name="Privatumzug"
+                description="Wir transportieren Ihre Möbel und alles, was Sie brauchen, an Ihren neuen Standort. Wir transportieren Sie in ganz Österreich zu Ihrem neuen Zuhause Mit uns garantieren Sie Schnelligkeit und Zugangssicherheit"
               />
             </div>
           </div>
@@ -73,19 +94,21 @@ export function Card({
   );
 }
 
-export function BoatIcon(props: SVGProps<SVGSVGElement>) {
+export function BuildingIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="3em"
-      height="3em"
+      fill="none"
       viewBox="0 0 24 24"
-      {...props}
+      strokeWidth={1.5}
+      stroke="#006fe0"
+      className="w-12 h-12"
     >
       <path
-        fill="#006fe0"
-        d="m3.95 19l-1.9-6.7q-.075-.3.063-.7t.587-.55L4 10.6V6q0-.825.588-1.412T6 4h3V2q0-.425.288-.712T10 1h4q.425 0 .713.288T15 2v2h3q.825 0 1.413.588T20 6v4.6l1.3.45q.525.2.625.588t.025.662l-1.9 6.7q-1 0-1.85-.387t-1.55-.988q-.275-.275-.65-.275t-.65.275q-.7.6-1.55.988T12 19q-.25 0-.475-.025t-.45-.075q-.725-.15-1.375-.525T8.5 17.5q-.2-.2-.513-.2t-.512.2q-.7.675-1.625 1.088T3.95 19M12 23q-1.025 0-2.037-.25T8 22q-.95.5-1.95.75T4 23H3q-.425 0-.713-.288T2 22t.288-.712T3 21h1q.9 0 1.8-.25t1.675-.725q.25-.15.525-.15t.525.15q.55.35 1.263.575t1.362.3q.2.025.425.038t.425.012q.9 0 1.8-.225t1.675-.7q.25-.15.525-.15t.525.15q.775.5 1.675.738T20 21h1q.425 0 .713.288T22 22t-.288.713T21 23h-1q-1.05 0-2.05-.25T16 22q-.95.5-1.963.75T12 23M6 9.95l5.375-1.75q.3-.1.625-.1t.625.1L18 9.95V6H6zM12 17q.75 0 1.4-.413t1.15-.962q.6-.65 1.475-.638t1.45.663q.275.275.55.537t.625.463l1.1-4L12 10.1l-7.8 2.55l1.15 3.95q.325-.2.6-.425t.55-.5q.625-.65 1.513-.663t1.487.638q.35.375.75.713t.9.512q.2.075.413.1T12 17m-.025-3.45"
-      ></path>
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+      />
     </svg>
   );
 }
@@ -94,31 +117,33 @@ export function HousesIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="3em"
-      height="3em"
+      fill="none"
       viewBox="0 0 24 24"
-      {...props}
+      stroke-width="1.5"
+      stroke="#006fe0"
+      className="w-12 h-12"
     >
       <path
-        fill="#006fe0"
-        d="M4 19v-7.375L3 12.4q-.35.25-.75.2t-.65-.4t-.187-.75t.387-.65l8.975-6.875q.275-.2.588-.3t.637-.1t.638.1t.587.3l9 6.875q.325.25.375.65t-.2.75q-.25.325-.65.375t-.725-.2L20 11.625V19q0 .825-.587 1.413T18 21H6q-.825 0-1.412-.587T4 19m2 0h12v-8.9l-6-4.575L6 10.1zm2-4q.425 0 .713-.288T9 14t-.288-.712T8 13t-.712.288T7 14t.288.713T8 15m4 0q.425 0 .713-.288T13 14t-.288-.712T12 13t-.712.288T11 14t.288.713T12 15m4 0q.425 0 .713-.288T17 14t-.288-.712T16 13t-.712.288T15 14t.288.713T16 15M6 19h12z"
-      ></path>
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+      />
     </svg>
   );
 }
 
-export function FlightIcon(props: SVGProps<SVGSVGElement>) {
+export function BoxIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="3em"
-      height="3em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 24 24"
       {...props}
     >
       <path
         fill="#006fe0"
-        d="M20 21H4q-.425 0-.712-.288T3 20t.288-.712T4 19h16q.425 0 .713.288T21 20t-.288.713T20 21M5.3 12.4l4.8-1.3l-3.475-5.9q-.2-.35-.075-.75t.55-.525l.425-.125q.225-.075.45-.025t.4.2L14.85 9.8l5-1.35q.8-.225 1.45.3t.65 1.4q0 .55-.337.975t-.863.575L5.575 15.8q-.325.1-.625-.025t-.475-.425L2.45 11.9q-.175-.275-.038-.575t.463-.35l.375-.075q.15-.025.275.013t.25.137z"
+        d="M11 19.425v-6.85L5 9.1v6.85zm2 0l6-3.475V9.1l-6 3.475zm-2 2.3L4 17.7q-.475-.275-.737-.725t-.263-1v-7.95q0-.55.263-1T4 6.3l7-4.025Q11.475 2 12 2t1 .275L20 6.3q.475.275.738.725t.262 1v7.95q0 .55-.262 1T20 17.7l-7 4.025Q12.525 22 12 22t-1-.275m5-13.2l1.925-1.1L12 4l-1.95 1.125zm-4 2.325l1.95-1.125L8.025 6.3l-1.95 1.125z"
       ></path>
     </svg>
   );

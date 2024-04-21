@@ -23,10 +23,8 @@ export default function Main() {
               Ein neues Kapitel beginnt Ihr Umzug, mühelos und Sorgenfrei
             </h1>
             <p className="text-white">
-              Vertrauen Sie auf Expertise, die bewegt Wir gestalten Räume und
-              Strukturen, die nicht nur unsere Kunden, sondern auch die
-              Gemeinschaft inspirieren. Jenseits des Gewöhnlichen, schaffen wir
-              emotionale Verbindungen zu jedem Ort.
+              Ihr Vertrauen ist unser Antrieb, und Ihre Zufriedenheit unser
+              Versprechen – bei jedem Schritt, auf jeder Etage, zu jeder Zeit.
             </p>
           </div>
         </div>
