@@ -4,6 +4,12 @@ import { Button } from "@nextui-org/react";
 export default function Plans() {
   return (
     <section className="w-full p-20 flex-wrap gap-y-8 px-4 min-h-screen gap-x-6 flex justify-center items-center">
+      <div className="w-full -center flex-col gap-y-5">
+        <span className="text-white text-center drop-shadow-sm px-2.5 py-1 border-l-5 border-blueRuin bg-black/20">
+          Pricing
+        </span>
+        <h1 className="-h1 text-center">Our Best Pricing</h1>
+      </div>
       <Plan
         name="Basic"
         price="€39"
@@ -25,7 +31,7 @@ export default function Plans() {
         ]}
       />
       <Plan
-        name="Standard"
+        name="Premium"
         price="€89"
         list={[
           "Double Truck",

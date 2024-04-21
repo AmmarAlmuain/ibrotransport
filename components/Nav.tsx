@@ -9,7 +9,7 @@ export default function Nav() {
   const toggleNavBar = () => setIsClose(!isClose);
   return (
     <>
-      <nav className="w-full -center px-5 -mb-20 max-md:px-5 relative z-40">
+      <nav className="w-full -center px-5 -mb-20 max-md:px-5 fixed z-40">
         {isClose ? (
           <>
             <div className="px-5 top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
@@ -49,7 +49,7 @@ export default function Nav() {
                     </AccordionItem>
                   </Accordion>
                 </li>
-                <MobileNavItem name="Über Uns" href="/" />
+                <MobileNavItem name="Über Uns" href="/about-us" />
                 <MobileNavItem name="Kontakt" href="/" />
               </ul>
             </div>
@@ -60,7 +60,7 @@ export default function Nav() {
         <div className="w-full max-w-6xl">
           <div className="w-full h-20 max-md:h-14 px-5 bg-coarseWool/30 backdrop-blur flex justify-between items-center">
             <ul className="-center gap-x-5 max-lg:hidden h-full">
-              <NavItem name="Home" />
+              <NavItem name="Home" href="/" />
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
               <li className="px-2.5 relative h-full -center group">
                 <div className="w-full flex justify-around text-white items-center gap-x-2">
@@ -95,9 +95,9 @@ export default function Nav() {
                 </div>
               </li>
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
-              <NavItem name="Über Uns" />
+              <NavItem name="Über Uns" href="/about-us" />
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
-              <NavItem name="Kontakt" />
+              <NavItem name="Kontakt" href="/" />
             </ul>
             <div className="lg:hidden w-full">
               <div>
@@ -342,11 +342,11 @@ export function MobileNavItem({ name, href }: { name: string; href: string }) {
   );
 }
 
-export function NavItem({ name }: { name: string }) {
+export function NavItem({ name, href }: { name: string; href: string }) {
   return (
     <>
       <li className="px-2.5 h-full hover:text-blueRuin -center text-white font-medium -td">
-        <Link href={"/"}>{name}</Link>
+        <Link href={href}>{name}</Link>
       </li>
     </>
   );

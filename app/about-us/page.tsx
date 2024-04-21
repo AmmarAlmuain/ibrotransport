@@ -6,13 +6,33 @@ import { ReactElement, SVGProps } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import aboutUs2 from "@/assets/images/about-us-2.jpg";
 import aboutUs3 from "@/assets/images/about-us-3.jpg";
+import aboutUs4 from "@/assets/images/about-us-4.jpg";
 import Link from "next/link";
 import Plans from "@/components/Plans";
+import Testimonial from "@/components/Testimonial";
 
 export default function AboutUs() {
   return (
     <>
-      <div className="w-full h-96"></div>
+      <main className="w-full min-h-[70vh] -center">
+        <Image
+          src={aboutUs4}
+          alt="private rellocation image"
+          className="w-full h-[70vh] object-cover absolute"
+        />
+        <div className="relative z-30 max-sm:mt-20 flex justify-start w-full max-w-6xl flex-col">
+          <div className="w-full max-w-lg p-5 flex flex-col gap-y-5">
+            <div>
+              <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
+                About Us
+              </span>
+            </div>
+            <h1 className="-h1 text-white max-sm:text-2xl drop-shadow">
+              Our company
+            </h1>
+          </div>
+        </div>
+      </main>
       <div className="w-full flex">
         <Card
           comp={<BuildingIcon />}
@@ -140,11 +160,13 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <Testimonial />
       <Plans />
     </>
   );
 }
 
+//@ts-ignore
 export function Card({
   comp,
   name,

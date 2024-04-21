@@ -2,7 +2,6 @@
 
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@nextui-org/react";
-import germany from "@/assets/images/germany.jpg";
 import vienna from "@/assets/images/vienna.jpg";
 import graz from "@/assets/images/graz.jpg";
 import linz from "@/assets/images/linz.jpg";
