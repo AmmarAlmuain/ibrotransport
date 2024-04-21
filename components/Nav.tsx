@@ -9,7 +9,7 @@ export default function Nav() {
   const toggleNavBar = () => setIsClose(!isClose);
   return (
     <>
-      <nav className="w-full -center px-5 -mb-20 max-md:px-5 fixed z-40">
+      <nav className="w-full -center -mb-20 max-md:px-5 fixed z-40">
         {isClose ? (
           <>
             <div className="px-5 top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
@@ -57,7 +57,7 @@ export default function Nav() {
         ) : (
           <></>
         )}
-        <div className="w-full max-w-6xl">
+        <div className="w-full">
           <div className="w-full h-20 max-md:h-14 px-5 bg-coarseWool/30 backdrop-blur flex justify-between items-center">
             <ul className="-center gap-x-5 max-lg:hidden h-full">
               <NavItem name="Home" href="/" />

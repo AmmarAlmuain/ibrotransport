@@ -17,8 +17,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        coarseWool: "#191919",
-        blueRuin: "#006fe0",
+        coarseWool: "#0C0C0C",
+        blueRuin: "#FF6600",
       },
     },
   },
@@ -29,7 +29,7 @@ const config: Config = {
         light: {
           colors: {
             primary: {
-              DEFAULT: "#006fe0",
+              DEFAULT: "#FF6600",
             },
           },
         },

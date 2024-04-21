@@ -135,7 +135,7 @@ export default function nh() {
         </div>
       </div>
       <div className="w-full flex">
-        <div className="w-full h-[800px] bg-red-900">
+        <div className="w-full h-[800px]">
           <Image
             src={aboutUs3}
             alt="about us 3 image"
