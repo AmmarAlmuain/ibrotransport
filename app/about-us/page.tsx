@@ -5,6 +5,9 @@ import aboutUs from "@/assets/images/about-us.jpg";
 import { ReactElement, SVGProps } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import aboutUs2 from "@/assets/images/about-us-2.jpg";
+import aboutUs3 from "@/assets/images/about-us-3.jpg";
+import Link from "next/link";
+import Plans from "@/components/Plans";
 
 export default function AboutUs() {
   return (
@@ -41,8 +44,12 @@ export default function AboutUs() {
         />
       </div>
       <div className="flex w-full">
-        <div className="w-full h-full">
-          <Image src={aboutUs} alt="about us image" className="w-full h-full" />
+        <div className="w-full h-[800px]">
+          <Image
+            src={aboutUs}
+            alt="about us image"
+            className="w-full h-[800px] object-cover"
+          />
         </div>
         <div className="w-full -center">
           <div className="w-full flex-col justify-center items-start space-y-10 p-20">
@@ -88,9 +95,18 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="w-full flex bg-red-900">
-        <div className="w-full bg-green-900">.</div>
-        <div className="w-full bg-blue-900">
+      <div className="w-full flex">
+        <div className="w-full">
+          <div className="flex-col space-y-10 flex justify-center items-start p-20">
+            <span className="text-blueRuin">Our Mission</span>
+            <p className="text-[28px]">
+              &ldquo;We are able to handle any size load, to-and-from anywhere
+              and within any service time frame has made you our best and bring
+              to the table win-win..
+            </p>
+          </div>
+        </div>
+        <div className="w-full">
           <Image
             src={aboutUs2}
             alt="about us 2 image"
@@ -98,6 +114,33 @@ export default function AboutUs() {
           />
         </div>
       </div>
+      <div className="w-full flex">
+        <div className="w-full h-[800px] bg-red-900">
+          <Image
+            src={aboutUs3}
+            alt="about us 3 image"
+            className="w-full h-[800px] object-cover object-top"
+          />
+        </div>
+        <div className="w-full -center">
+          <div className="flex justify-center items-center flex-col gap-y-10 p-20">
+            <h3 className="text-4xl">
+              We give you complete control of your shipments.
+            </h3>
+            <Card2
+              no="1"
+              name="Logistic Solution"
+              description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
+            />
+            <Card2
+              no="2"
+              name="Logistic Solution"
+              description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
+            />
+          </div>
+        </div>
+      </div>
+      <Plans />
     </>
   );
 }
@@ -129,6 +172,47 @@ export function Card({
         </div>
       </div>
     </>
+  );
+}
+
+export function Card2({
+  no,
+  name,
+  description,
+}: {
+  no: string;
+  name: string;
+  description: string;
+}) {
+  return (
+    <div className="border -center hover:bg-gray-100 hover:border-transparent -td gap-x-5 border-gray-300 p-10 group">
+      <div className="justify-center items-start flex flex-col gap-y-5">
+        <span>{no}</span>
+        <h4 className="text-xl cursor-pointer group-hover:text-blueRuin -td">
+          {name}
+        </h4>
+        <p className="font-light text-sm">{description}</p>
+      </div>
+      <div className="min-w-14 cursor-pointer h-14 bg-transparent -center group-hover:bg-blueRuin rounded-full -td">
+        <Link href={"/"}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="group-hover:text-white text-transparent"
+              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </Link>
+      </div>
+    </div>
   );
 }
 

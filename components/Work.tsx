@@ -3,6 +3,11 @@
 import Image, { StaticImageData } from "next/image";
 import { Button } from "@nextui-org/react";
 import germany from "@/assets/images/germany.jpg";
+import vienna from "@/assets/images/vienna.jpg";
+import graz from "@/assets/images/graz.jpg";
+import linz from "@/assets/images/linz.jpg";
+import salzburg from "@/assets/images/salzburg.jpg";
+import innsbruck from "@/assets/images/innsbruck.jpg";
 
 export default function Work() {
   return (
@@ -10,11 +15,11 @@ export default function Work() {
       <section className="-section h-full gap-y-10 flex flex-col justify-center items-center">
         <h1 className="-h1 text-center">Transport in ganz Österreich</h1>
         <div className="flex gap-x-5 gap-y-5 justify-start max-sm:justify-center flex-wrap">
-          <Card img={germany} name="Linz" />
-          <Card img={germany} name="Salzburg" />
-          <Card img={germany} name="Vienna" />
-          <Card img={germany} name="Graz" />
-          <Card img={germany} name="Innsbruck" />
+          <Card img={linz} name="Linz" />
+          <Card img={salzburg} name="Salzburg" />
+          <Card img={vienna} name="Vienna" />
+          <Card img={graz} name="Graz" />
+          <Card img={innsbruck} name="Innsbruck" />
         </div>
       </section>
       <div className="h-[40vh] pt-10 -center bg-gray-100 -mt-40 w-full">
@@ -28,7 +33,7 @@ export default function Work() {
 
 export function Card({ img, name }: { img: StaticImageData; name: string }) {
   return (
-    <div className="w-[270px] h-[354px] before:bg-gradient-to-t before:via-transparent before:from-coarseWool to-transparent before:left-0 before:w-full before:h-full relative before:absolute before:bottom-0 flex flex-col justify-end">
+    <div className="w-[250px] h-[354px] before:bg-gradient-to-t before:via-transparent before:from-coarseWool to-transparent before:left-0 before:w-full before:h-full relative before:absolute before:bottom-0 flex flex-col justify-end">
       <Image
         src={img}
         alt="work image"
