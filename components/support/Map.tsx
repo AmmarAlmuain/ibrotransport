@@ -1,12 +1,12 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import "leaflet/dist/leaflet.css";
 
 export default function Map() {
-  const position = [35.6585805, 139.7454329];
+  //   const position = [35.6585805, 139.7454329];
   return (
     <>
       <div className="w-full">
-        <MapContainer
+        {/* <MapContainer
           center={position}
           zoom={13}
           style={{ height: "100vh", width: "100%" }}
@@ -20,7 +20,7 @@ export default function Map() {
               Tokyo Tower - A major tourist attraction and a symbol of Tokyo.
             </Popup>
           </Marker>
-        </MapContainer>
+        </MapContainer> */}
       </div>
     </>
   );
