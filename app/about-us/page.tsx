@@ -11,36 +11,6 @@ import Link from "next/link";
 import Plans from "@/components/Plans";
 import Testimonial from "@/components/Testimonial";
 
-const Card = function Card({
-  comp,
-  name,
-  description,
-}: {
-  comp: ReactElement;
-  name: string;
-  description: string;
-}) {
-  return (
-    <>
-      <div className="flex flex-col group p-10 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center w-full max-w-96 h-full">
-        <div>{comp}</div>
-        <div className="-center flex-col gap-y-2.5">
-          <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
-          <p className="text-center text-lg">{description}</p>
-        </div>
-        <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
-          <span className="group-hover:hidden">
-            <RightIcon />
-          </span>
-          <span className="group-hover:flex hidden">
-            <RightColoredIcon />
-          </span>
-        </div>
-      </div>
-    </>
-  );
-};
-
 export default function nh() {
   return (
     <>
@@ -196,7 +166,37 @@ export default function nh() {
   );
 }
 
-export function Card2({
+const Card = function Card({
+  comp,
+  name,
+  description,
+}: {
+  comp: ReactElement;
+  name: string;
+  description: string;
+}) {
+  return (
+    <>
+      <div className="flex flex-col group p-10 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center w-full max-w-96 h-full">
+        <div>{comp}</div>
+        <div className="-center flex-col gap-y-2.5">
+          <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
+          <p className="text-center">{description}</p>
+        </div>
+        <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
+          <span className="group-hover:hidden">
+            <RightIcon />
+          </span>
+          <span className="group-hover:flex hidden">
+            <RightColoredIcon />
+          </span>
+        </div>
+      </div>
+    </>
+  );
+};
+
+const Card2 = function Card2({
   no,
   name,
   description,
@@ -235,26 +235,9 @@ export function Card2({
       </div>
     </div>
   );
-}
+};
 
-export function TextIcon(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="3em"
-      height="3em"
-      viewBox="0 0 24 24"
-      {...props}
-    >
-      <path
-        fill="currentColor"
-        d="M12 18.5q.625 0 1.063-.437T13.5 17h-3q0 .625.438 1.063T12 18.5M7 16h10v-2h-1v-2.6q0-1.525-.788-2.787T13 7v-.5q0-.425-.288-.712T12 5.5t-.712.288T11 6.5V7q-1.425.35-2.212 1.613T8 11.4V14H7zm5 6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22"
-      ></path>
-    </svg>
-  );
-}
-
-export function BuildingIcon(props: SVGProps<SVGSVGElement>) {
+const BuildingIcon = function BuildingIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -271,9 +254,9 @@ export function BuildingIcon(props: SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
 
-export function HousesIcon(props: SVGProps<SVGSVGElement>) {
+const HousesIcon = function HousesIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -290,9 +273,9 @@ export function HousesIcon(props: SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
 
-export function BoxIcon(props: SVGProps<SVGSVGElement>) {
+const BoxIcon = function BoxIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -307,9 +290,9 @@ export function BoxIcon(props: SVGProps<SVGSVGElement>) {
       ></path>
     </svg>
   );
-}
+};
 
-export function TruckIcon(props: SVGProps<SVGSVGElement>) {
+const TruckIcon = function TruckIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -324,9 +307,9 @@ export function TruckIcon(props: SVGProps<SVGSVGElement>) {
       ></path>
     </svg>
   );
-}
+};
 
-export function RightIcon() {
+const RightIcon = function RightIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -343,9 +326,9 @@ export function RightIcon() {
       />
     </svg>
   );
-}
+};
 
-export function RightColoredIcon() {
+const RightColoredIcon = function RightColoredIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -362,4 +345,4 @@ export function RightColoredIcon() {
       />
     </svg>
   );
-}
+};
