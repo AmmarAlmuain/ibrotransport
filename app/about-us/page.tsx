@@ -11,7 +11,7 @@ import Link from "next/link";
 import Plans from "@/components/Plans";
 import Testimonial from "@/components/Testimonial";
 
-export default function AboutUs() {
+export default function About() {
   return (
     <>
       <main className="w-full min-h-[70vh] -center">
