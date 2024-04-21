@@ -11,6 +11,36 @@ import Link from "next/link";
 import Plans from "@/components/Plans";
 import Testimonial from "@/components/Testimonial";
 
+const Card = function Card({
+  comp,
+  name,
+  description,
+}: {
+  comp: ReactElement;
+  name: string;
+  description: string;
+}) {
+  return (
+    <>
+      <div className="flex flex-col group p-10 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center w-full max-w-96 h-full">
+        <div>{comp}</div>
+        <div className="-center flex-col gap-y-2.5">
+          <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
+          <p className="text-center text-lg">{description}</p>
+        </div>
+        <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
+          <span className="group-hover:hidden">
+            <RightIcon />
+          </span>
+          <span className="group-hover:flex hidden">
+            <RightColoredIcon />
+          </span>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default function nh() {
   return (
     <>
@@ -162,36 +192,6 @@ export default function nh() {
       </div>
       <Testimonial />
       <Plans />
-    </>
-  );
-}
-
-function Card({
-  comp,
-  name,
-  description,
-}: {
-  comp: ReactElement;
-  name: string;
-  description: string;
-}) {
-  return (
-    <>
-      <div className="flex flex-col group p-10 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center w-full max-w-96 h-full">
-        <div>{comp}</div>
-        <div className="-center flex-col gap-y-2.5">
-          <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
-          <p className="text-center text-lg">{description}</p>
-        </div>
-        <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
-          <span className="group-hover:hidden">
-            <RightIcon />
-          </span>
-          <span className="group-hover:flex hidden">
-            <RightColoredIcon />
-          </span>
-        </div>
-      </div>
     </>
   );
 }
