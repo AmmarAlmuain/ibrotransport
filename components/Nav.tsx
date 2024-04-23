@@ -15,9 +15,11 @@ export default function Nav() {
             <div className="top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
               <ul className="bg-coarseWool p-2.5 pt-4 w-full">
                 <div className="h-full px-5 md:my-4">
-                  <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
-                    <span className="text-blueRuin">Ibro</span>Transport.
-                  </h1>
+                  <Link href={"/"} className="cursor-pointer">
+                    <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
+                      <span className="text-blueRuin">Ibro</span>Transport.
+                    </h1>
+                  </Link>
                 </div>
                 <MobileNavItem name="Home" href="/" />
                 <li className="w-full rounded-full text-white flex-col flex px-5 justify-start items-center">
@@ -39,7 +41,10 @@ export default function Nav() {
                           name="Firmenumzug"
                           href="/services/company-relocation"
                         />
-                        <MobileNavItem name="Transports" href="/" />
+                        <MobileNavItem
+                          name="Transports"
+                          href="/services/transports"
+                        />
                         <MobileNavItem
                           name="Montage"
                           href="/services/assembly"
@@ -57,7 +62,7 @@ export default function Nav() {
                   </Accordion>
                 </li>
                 <MobileNavItem name="Über Uns" href="/about-us" />
-                <MobileNavItem name="Kontakt" href="/" />
+                <MobileNavItem name="Kontakt" href="/contact" />
               </ul>
             </div>
           </>
@@ -70,14 +75,19 @@ export default function Nav() {
               <div className="w-64 h-full bg-coarseWool -center">
                 <div className="flex justify-start">
                   <div className="h-full flex justify-end flex-col items-center">
-                    <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
-                      <span className="text-blueRuin">Ibro</span>Transport.
-                    </h1>
+                    <Link href={"/"} className="cursor-pointer">
+                      <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
+                        <span className="text-blueRuin">Ibro</span>Transport.
+                      </h1>
+                    </Link>
                   </div>
                 </div>
               </div>
               <NavItem name="Home" href="/" />
-              <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
+              {/* <Divider
+                orientation="vertical"
+                className="h-5 w-px bg-gray-300/30"
+              /> */}
               <li className="px-2.5 relative h-full -center group">
                 <div className="w-full flex justify-around items-center gap-x-2">
                   <Link href={"/"}>Leistungen</Link>
@@ -96,7 +106,10 @@ export default function Nav() {
                         name="Firmenumzug"
                         href="/services/company-relocation"
                       />
-                      <MobileNavItem name="Transports" href="/" />
+                      <MobileNavItem
+                        name="Transports"
+                        href="/services/transports"
+                      />
                       <MobileNavItem name="Montage" href="/services/assembly" />
                       <MobileNavItem
                         name="Möbelabholung"
@@ -110,10 +123,16 @@ export default function Nav() {
                   </div>
                 </div>
               </li>
-              <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
+              {/* <Divider
+                orientation="vertical"
+                className="h-5 w-px bg-gray-300/30"
+              /> */}
               <NavItem name="Über Uns" href="/about-us" />
-              <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
-              <NavItem name="Kontakt" href="/" />
+              {/* <Divider
+                orientation="vertical"
+                className="h-5 w-px bg-gray-300/30"
+              /> */}
+              <NavItem name="Kontakt" href="/contact" />
             </ul>
             <div className="lg:hidden w-full pl-5">
               <div>

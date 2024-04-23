@@ -9,9 +9,11 @@ export default function Footer() {
           <ul className="w-72 flex flex-col gap-y-6 max-lg:w-full">
             <div className="flex justify-start">
               <div className="h-full mb-2 flex justify-end flex-col items-center">
-                <h1 className="-h1 text-white max-sm:text-2xl leading-none font-bold">
-                  <span className="text-blueRuin">Ibro</span>Transport.
-                </h1>
+                <Link href={"/"} className="cursor-pointer">
+                  <h1 className="-h1 text-white max-sm:text-2xl leading-none font-bold">
+                    <span className="text-blueRuin">Ibro</span>Transport.
+                  </h1>
+                </Link>
               </div>
             </div>
             <div>
@@ -26,21 +28,31 @@ export default function Footer() {
             <div>
               <li className="text-xl text-white font-medium">Menu</li>
             </div>
-            <FooterItem name="Home" />
-            <FooterItem name="Services" />
-            <FooterItem name="About" />
-            <FooterItem name="Contact" />
-            <FooterItem name="More" />
+            <FooterItem name="Home" href="/" />
+            <FooterItem name="About Us" href="/about-us" />
+            <FooterItem name="Contact" href="/contact" />
+            <FooterItem name="Privacy Policy" href="/" />
+            <FooterItem name="Terms and Conditions" href="/" />
           </ul>
           <ul className="text-gray-300 flex flex-col gap-y-4 max-lg:w-full">
             <div>
               <li className="text-xl text-white font-medium">Useful link</li>
             </div>
-            <FooterItem name="Home" />
-            <FooterItem name="About Us" />
-            <FooterItem name="Privacy Policy" />
-            <FooterItem name="Terms and Conditions" />
-            <FooterItem name="Return & Refund" />
+            <FooterItem
+              name="Privatumzug"
+              href="/services/private-relocation"
+            />
+            <FooterItem
+              name="Firmenumzug"
+              href="/services/company-relocation"
+            />
+            <FooterItem name="Transports" href="/services/transports" />
+            <FooterItem name="Montage" href="/services/assembly" />
+            <FooterItem
+              name="Möbelabholung"
+              href="/services/furniture-pick-up"
+            />
+            <FooterItem name="Packservice" href="/services/pack-service" />
           </ul>
           <ul className="flex flex-col gap-y-4 max-lg:w-full">
             <div>
@@ -58,11 +70,11 @@ export default function Footer() {
   );
 }
 
-export function FooterItem({ name }: { name: string }) {
+export function FooterItem({ name, href }: { name: string; href: string }) {
   return (
     <>
       <li>
-        <Link href={"/"}>
+        <Link href={href}>
           <span className="text-gray-300 cursor-pointer -td hover:text-blueRuin">
             {name}
           </span>
