@@ -35,16 +35,19 @@ export default function nh() {
       </main>
       <div className="w-full flex max-xl:flex-wrap">
         <Card
+          href="/services/company-relocation"
           comp={<BuildingIcon />}
           name="Firmenumzug"
           description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
         />
         <Card
+          href="/services/private-relocation"
           comp={<HousesIcon />}
           name="Privatumzug"
           description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
         />
         <Card
+          href="/services/transports"
           comp={
             <div className="flex-col -center">
               <div>{<BoxIcon />}</div>
@@ -58,6 +61,7 @@ export default function nh() {
           description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
         />
         <Card
+          href="/services/assembly"
           comp={<TruckIcon />}
           name="Montage"
           description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
@@ -155,11 +159,13 @@ export default function nh() {
             </h3>
             <Card2
               no="1"
+              href="/services/furniture-pick-up"
               name="Logistic Solution"
               description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
             />
             <Card2
               no="2"
+              href="/services/pack-service"
               name="Logistic Solution"
               description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
             />
@@ -176,28 +182,32 @@ const Card = function Card({
   comp,
   name,
   description,
+  href,
 }: {
   comp: ReactElement;
   name: string;
   description: string;
+  href: string;
 }) {
   return (
     <>
-      <div className="flex flex-col group px-20 py-10 flex-1 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center h-full">
-        <div>{comp}</div>
-        <div className="-center flex-col gap-y-2.5">
-          <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
-          <p className="text-center">{description}</p>
+      <Link href={href}>
+        <div className="flex flex-col group px-20 py-10 flex-1 gap-y-5 -td hover:bg-gray-200/50 justify-center max-sm:flex-col max-sm:gap-y-5 items-center h-full">
+          <div>{comp}</div>
+          <div className="-center flex-col gap-y-2.5">
+            <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
+            <p className="text-center">{description}</p>
+          </div>
+          <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
+            <span className="group-hover:hidden">
+              <RightIcon />
+            </span>
+            <span className="group-hover:flex hidden">
+              <RightColoredIcon />
+            </span>
+          </div>
         </div>
-        <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
-          <span className="group-hover:hidden">
-            <RightIcon />
-          </span>
-          <span className="group-hover:flex hidden">
-            <RightColoredIcon />
-          </span>
-        </div>
-      </div>
+      </Link>
     </>
   );
 };
@@ -206,22 +216,24 @@ const Card2 = function Card2({
   no,
   name,
   description,
+  href,
 }: {
   no: string;
   name: string;
   description: string;
+  href: string;
 }) {
   return (
     <div className="border -center hover:bg-gray-100 hover:border-transparent -td gap-x-5 border-gray-300 p-10 group">
       <div className="justify-center items-start flex flex-col gap-y-5">
         <span>{no}</span>
         <h4 className="text-xl cursor-pointer group-hover:text-blueRuin -td">
-          {name}
+          <Link href={href}>{name}</Link>
         </h4>
         <p className="font-light text-sm">{description}</p>
       </div>
       <div className="min-w-14 cursor-pointer h-14 bg-transparent -center group-hover:bg-blueRuin rounded-full -td">
-        <Link href={"/"}>
+        <Link href={href}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
