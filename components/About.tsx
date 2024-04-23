@@ -39,8 +39,13 @@ export default function About() {
                 wir sind Ihr vertrauenswürdiger Partner bei jedem Ihrer
                 Schritte.
               </p>
-              <Point comp={<BoxIcon />} name={"Pünktliche Lieferung"} />
-              <Point comp={<EuroIcon />} name={"Optimierte Transportkosten"} />
+              <div className="about-card gap-5 flex flex-col">
+                <Point comp={<BoxIcon />} name={"Pünktliche Lieferung"} />
+                <Point
+                  comp={<EuroIcon />}
+                  name={"Optimierte Transportkosten"}
+                />
+              </div>
             </div>
             <div className="w-full relative max-sm:gap-y-5 max-sm:flex-col max-sm:flex">
               <Image

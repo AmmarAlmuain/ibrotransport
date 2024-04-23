@@ -1,14 +1,15 @@
 "use client";
 import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function Plans() {
   return (
-    <section className="w-full p-20 flex-wrap gap-y-8 px-4 min-h-screen gap-x-6 flex justify-center items-center">
+    <section className="plans-container w-full p-20 flex-wrap gap-y-8 px-4 min-h-screen gap-x-6 flex justify-center items-center">
       <div className="w-full -center flex-col gap-y-5">
         <span className="text-white text-center drop-shadow-sm px-2.5 py-1 border-l-5 border-blueRuin bg-black/20">
-          Pricing
+          Preis
         </span>
-        <h1 className="-h1 text-center">Our Best Pricing</h1>
+        <h1 className="-h1 text-center">Unser bester Preis</h1>
       </div>
       <Plan
         name="Basic"
@@ -31,7 +32,7 @@ export default function Plans() {
         ]}
       />
       <Plan
-        name="Premium"
+        name="Prämie"
         price="€89"
         list={[
           "Double Truck",
@@ -54,7 +55,7 @@ export function Plan({
   list: string[];
 }) {
   return (
-    <div className="w-96 min-h-full group gap-y-12 hover:bg-blueRuin -td py-16 max-md:w-full relative bg-gray-100 flex flex-col justify-around items-center">
+    <div className="plan-card mt-10 w-96 min-h-full group gap-y-12 hover:bg-blueRuin -td py-16 max-md:w-full relative bg-gray-100 flex flex-col justify-around items-center">
       <div className="flex flex-col gap-y-5 justify-center items-center">
         <span className="text-3xl font-semibold group-hover:text-white -td">
           {name}
@@ -62,7 +63,7 @@ export function Plan({
         <span className="text-7xl font-bold flex gap-x-1 group-hover:text-white justify-center items-end leading-none">
           {price}
           <span className="text-xl font-normal group-hover:text-white -td">
-            /month
+            /stunde
           </span>
         </span>
       </div>
@@ -90,13 +91,15 @@ export function Plan({
           );
         })}
       </ul>
-      <Button
-        className="bg-coarseWool text-white group-hover:text-coarseWool group-hover:bg-white -td"
-        size="lg"
-        radius="none"
-      >
-        Choose Plan
-      </Button>
+      <Link href={"#reach"}>
+        <Button
+          className="bg-coarseWool text-white group-hover:text-coarseWool group-hover:bg-white -td"
+          size="lg"
+          radius="none"
+        >
+          Terminbuchung
+        </Button>
+      </Link>
     </div>
   );
 }

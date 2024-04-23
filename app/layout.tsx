@@ -6,6 +6,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import { Reach } from "@/components/Reach";
 import Footer from "@/components/Footer";
+import Animations from "@/components/support/Animations";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
         <NextUIProvider>{children}</NextUIProvider>
         <Reach />
         <Footer />
+        <Animations />
       </body>
     </html>
   );

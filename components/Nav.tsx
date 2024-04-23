@@ -9,18 +9,25 @@ export default function Nav() {
   const toggleNavBar = () => setIsClose(!isClose);
   return (
     <>
-      <nav className="w-full -center -mb-20 max-md:px-5 fixed z-40">
+      <nav className="w-full -center -mb-20 fixed z-40">
         {isClose ? (
           <>
-            <div className="px-5 top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
-              <ul className="bg-coarseWool/30 backdrop-blur p-2.5 w-full">
+            <div className="top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
+              <ul className="bg-coarseWool p-2.5 pt-4 w-full">
+                <div className="h-full px-5 md:my-4">
+                  <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
+                    <span className="text-blueRuin">Ibro</span>Transport.
+                  </h1>
+                </div>
                 <MobileNavItem name="Home" href="/" />
                 <li className="w-full rounded-full text-white flex-col flex px-5 justify-start items-center">
                   <Accordion className="p-0" isCompact>
                     <AccordionItem
                       key="1"
                       aria-label="Services"
-                      title={<span style={{ color: "white" }}>Leistungen</span>}
+                      title={
+                        <span style={{ color: "white" }}>Leistungen +</span>
+                      }
                       className="p-0 text-white"
                     >
                       <ul className="w-full">
@@ -58,12 +65,21 @@ export default function Nav() {
           <></>
         )}
         <div className="w-full">
-          <div className="w-full h-20 max-md:h-14 px-5 bg-coarseWool/30 backdrop-blur flex justify-between items-center">
+          <div className="w-full h-20 max-md:h-14 bg-white flex justify-between items-center">
             <ul className="-center gap-x-5 max-lg:hidden h-full">
+              <div className="w-64 h-full bg-coarseWool -center">
+                <div className="flex justify-start">
+                  <div className="h-full flex justify-end flex-col items-center">
+                    <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
+                      <span className="text-blueRuin">Ibro</span>Transport.
+                    </h1>
+                  </div>
+                </div>
+              </div>
               <NavItem name="Home" href="/" />
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
               <li className="px-2.5 relative h-full -center group">
-                <div className="w-full flex justify-around text-white items-center gap-x-2">
+                <div className="w-full flex justify-around items-center gap-x-2">
                   <Link href={"/"}>Leistungen</Link>
                   <span className="group-hover:rotate-180 duration-300 transition-all">
                     <DownArrowIcon />
@@ -99,7 +115,7 @@ export default function Nav() {
               <Divider orientation="vertical" className="h-5 bg-gray-300/30" />
               <NavItem name="Kontakt" href="/" />
             </ul>
-            <div className="lg:hidden w-full">
+            <div className="lg:hidden w-full pl-5">
               <div>
                 <Button
                   radius="none"
@@ -123,7 +139,7 @@ export default function Nav() {
                 </Button>
               </div>
             </div>
-            <div className="-center gap-x-5">
+            <div className="-center gap-x-5 pr-5">
               <div className="flex gap-x-5 max-sm:hidden">
                 <FacebookLogo />
                 <InstagramLogo />
@@ -322,7 +338,7 @@ export function DownArrowIcon(props: SVGProps<SVGSVGElement>) {
     >
       <path
         fill="none"
-        stroke="white"
+        stroke="#0C0C0C"
         strokeLinecap="square"
         d="m4.5 6.5l3 3l3-3"
       ></path>
@@ -345,7 +361,7 @@ export function MobileNavItem({ name, href }: { name: string; href: string }) {
 export function NavItem({ name, href }: { name: string; href: string }) {
   return (
     <>
-      <li className="px-2.5 h-full hover:text-blueRuin -center text-white font-medium -td">
+      <li className="px-2.5 h-full hover:text-blueRuin -center font-medium -td">
         <Link href={href}>{name}</Link>
       </li>
     </>

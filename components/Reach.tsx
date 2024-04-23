@@ -8,7 +8,7 @@ const sendEmail = async () => {
   return response;
 };
 
-export async function Reach() {
+export function Reach() {
   const [workTypes, setWorkTypes] = useState([
     "Private relocation",
     "Company relocation",
