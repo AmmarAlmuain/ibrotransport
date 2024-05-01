@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button, Divider, Accordion, AccordionItem } from "@nextui-org/react";
 import { SVGProps, useState } from "react";
+import Logo from "./Icons/Logo";
 
 export default function Nav() {
   const [isClose, setIsClose] = useState(false);
@@ -14,12 +15,8 @@ export default function Nav() {
           <>
             <div className="top-0 absolute translate-y-14 md:translate-y-[80px] w-full">
               <ul className="bg-coarseWool p-2.5 pt-4 w-full">
-                <div className="h-full px-5 md:my-4">
-                  <Link href={"/"} className="cursor-pointer">
-                    <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
-                      <span className="text-blueRuin">Ibro</span>Transport.
-                    </h1>
-                  </Link>
+                <div className="h-full flex justify-start px-5">
+                  <Logo />
                 </div>
                 <MobileNavItem name="Home" href="/" />
                 <li className="w-full rounded-full text-white flex-col flex px-5 justify-start items-center">
@@ -72,16 +69,8 @@ export default function Nav() {
         <div className="w-full">
           <div className="w-full h-20 max-md:h-14 bg-white flex justify-between items-center">
             <ul className="-center gap-x-5 max-lg:hidden h-full">
-              <div className="w-64 h-full bg-coarseWool -center">
-                <div className="flex justify-start">
-                  <div className="h-full flex justify-end flex-col items-center">
-                    <Link href={"/"} className="cursor-pointer">
-                      <h1 className="font-bold text-2xl text-white max-sm:text-2xl leading-none">
-                        <span className="text-blueRuin">Ibro</span>Transport.
-                      </h1>
-                    </Link>
-                  </div>
-                </div>
+              <div className="w-72 bg-coarseWool -center h-full">
+                <Logo />
               </div>
               <NavItem name="Home" href="/" />
               {/* <Divider

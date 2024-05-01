@@ -6,6 +6,7 @@ export default function Main() {
           autoPlay
           loop
           muted
+          playsInline
           rev="true"
           style={{
             width: "100%",

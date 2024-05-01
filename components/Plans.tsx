@@ -13,32 +13,35 @@ export default function Plans() {
       </div>
       <Plan
         name="Basic"
-        price="€39"
+        price="€29.99"
+        workers="1 Mitarbeiter"
         list={[
-          "Double Truck",
-          "Full Insurance",
-          "500 Km",
-          "Real-time rate shopping",
+          "Kostenlose Vor-Ort-Besichtigung",
+          "Möbelmontage/Demontage",
+          "Umzugsberatung und Planung",
+          "Umzugsversicherung",
         ]}
       />
       <Plan
         name="Standard"
-        price="€59"
+        price="€49.99"
+        workers="2 Mitarbeiter"
         list={[
-          "Double Truck",
-          "Full Insurance",
-          "1000 Km",
-          "Real-time rate shopping",
+          "Kostenlose Vor-Ort-Besichtigung",
+          "Möbelmontage/Demontage",
+          "mzugsberatung und Planung",
+          "Umzugsversicherung",
         ]}
       />
       <Plan
         name="Prämie"
-        price="€89"
+        price="€69.99"
+        workers="3 Mitarbeiter"
         list={[
-          "Double Truck",
-          "Full Insurance",
-          "Unlimited Km",
-          "Real-time rate shopping",
+          "Kostenlose Vor-Ort-Besichtigung",
+          "Möbelmontage/Demontage",
+          "mzugsberatung und Planung",
+          "Umzugsversicherung",
         ]}
       />
     </section>
@@ -49,10 +52,12 @@ export function Plan({
   name,
   price,
   list,
+  workers,
 }: {
   name: string;
   price: string;
   list: string[];
+  workers: string;
 }) {
   return (
     <div className="plan-card mt-10 w-96 min-h-full group gap-y-12 hover:bg-blueRuin -td py-16 max-md:w-full relative bg-gray-100 flex flex-col justify-around items-center">
@@ -60,7 +65,10 @@ export function Plan({
         <span className="text-3xl font-semibold group-hover:text-white -td">
           {name}
         </span>
-        <span className="text-7xl font-bold flex gap-x-1 group-hover:text-white justify-center items-end leading-none">
+        <span className="-mt-2 font-semibold group-hover:text-white -td">
+          {workers}
+        </span>
+        <span className="text-6xl max-sm:text-5xl font-bold flex gap-x-1 group-hover:text-white justify-center items-end leading-none">
           {price}
           <span className="text-xl font-normal group-hover:text-white -td">
             /stunde
@@ -72,7 +80,7 @@ export function Plan({
           return (
             <div
               key={item}
-              className="py-4 w-full border-t border-gray-200/40 flex gap-x-4 justify-center items-center"
+              className="py-4 w-full border-t border-gray-200/40 flex gap-x-4 justify-start items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

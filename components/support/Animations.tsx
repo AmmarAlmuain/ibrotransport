@@ -12,11 +12,12 @@ export default function Animations() {
         {
           opacity: 1,
           y: "0",
-          duration: 0.3,
+          delay: 0.5,
+          duration: 1,
           scrollTrigger: {
             trigger: [".service-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
       gsap.fromTo(
@@ -25,11 +26,11 @@ export default function Animations() {
         {
           opacity: 1,
           y: "0",
-          duration: 0.3,
+          duration: 1,
           scrollTrigger: {
             trigger: [".plan-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
       gsap.fromTo(
@@ -38,11 +39,11 @@ export default function Animations() {
         {
           opacity: 1,
           x: "0",
-          duration: 0.3,
+          duration: 1,
           scrollTrigger: {
             trigger: [".about-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
       gsap.fromTo(
@@ -51,11 +52,11 @@ export default function Animations() {
         {
           opacity: 1,
           x: "0",
-          duration: 0.3,
+          duration: 1,
           scrollTrigger: {
             trigger: [".feature-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
       gsap.fromTo(
@@ -64,11 +65,11 @@ export default function Animations() {
         {
           opacity: 1,
           y: "0",
-          duration: 0.3,
+          duration: 1,
           scrollTrigger: {
             trigger: [".testimonial-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
       gsap.fromTo(
@@ -77,11 +78,11 @@ export default function Animations() {
         {
           opacity: 1,
           y: "0",
-          duration: 0.3,
+          duration: 1,
           scrollTrigger: {
             trigger: [".work-card"],
           },
-          stagger: 0.3,
+          stagger: 0.5,
         }
       );
     }

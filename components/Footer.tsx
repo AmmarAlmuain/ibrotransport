@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SVGProps } from "react";
+import Logo from "./Icons/Logo";
 
 export default function Footer() {
   return (
@@ -9,11 +10,9 @@ export default function Footer() {
           <ul className="w-72 flex flex-col gap-y-6 max-lg:w-full">
             <div className="flex justify-start">
               <div className="h-full mb-2 flex justify-end flex-col items-center">
-                <Link href={"/"} className="cursor-pointer">
-                  <h1 className="-h1 text-white max-sm:text-2xl leading-none font-bold">
-                    <span className="text-blueRuin">Ibro</span>Transport.
-                  </h1>
-                </Link>
+                <div className="bg-coarseWool -center">
+                  <Logo />
+                </div>
               </div>
             </div>
             <div>

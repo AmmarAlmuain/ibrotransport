@@ -3,12 +3,23 @@
 import { Select, SelectItem, Input, Textarea, Button } from "@nextui-org/react";
 import { SVGProps, useState } from "react";
 
-const sendEmail = async () => {
-  const response = await fetch("/api/send", { method: "GET" });
+const sendEmail = async (body: any = {}) => {
+  const response = await fetch("/api/send", {
+    method: "POST",
+    body: JSON.stringify(body),
+  });
   return response;
 };
 
 export function Reach() {
+  const body: any = {
+    workType: "",
+    name: "",
+    email: "",
+    phone: "",
+    city: "",
+    message: "",
+  };
   const [workTypes, setWorkTypes] = useState([
     "Private relocation",
     "Company relocation",
@@ -73,6 +84,9 @@ export function Reach() {
             label="Work type"
             placeholder="Select an work type"
             radius="none"
+            onChange={(value) => {
+              body.workType = value.target.value;
+            }}
           >
             {workTypes.map((workType) => (
               <SelectItem key={workType} value={workType}>
@@ -87,6 +101,9 @@ export function Reach() {
               label="Name"
               radius="none"
               placeholder="Your Name"
+              onChange={(value) => {
+                body.name = value.target.value;
+              }}
             />
             <Input
               type="email"
@@ -94,6 +111,9 @@ export function Reach() {
               label="Email"
               radius="none"
               placeholder="Your Email"
+              onChange={(value) => {
+                body.email = value.target.value;
+              }}
             />
           </div>
           <div className="w-full flex gap-x-5">
@@ -103,13 +123,19 @@ export function Reach() {
               label="Phone Number"
               radius="none"
               placeholder="Your Phone Number"
+              onChange={(value) => {
+                body.phone = value.target.value;
+              }}
             />
             <Input
-              type="email"
+              type="text"
               isRequired
               label="City"
               radius="none"
               placeholder="Your City"
+              onChange={(value) => {
+                body.city = value.target.value;
+              }}
             />
           </div>
           <Textarea
@@ -117,11 +143,14 @@ export function Reach() {
             label="Message"
             placeholder="Your Message"
             radius="none"
+            onChange={(value) => {
+              body.message = value.target.value;
+            }}
           />
           <Button
             className="max-w-xs"
             onClick={async () => {
-              await sendEmail();
+              await sendEmail(body);
             }}
             color="primary"
             radius="full"
