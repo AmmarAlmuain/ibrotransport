@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Logo() {
   return (
     <>
-      <div className="h-ful -center">
+      <div className="h-ful -center -translate-x-1.5">
         <div className="flex justify-start">
           <div className="h-full flex justify-end flex-col items-center">
             <Link href={"/"} className="cursor-pointer">

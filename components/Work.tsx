@@ -74,7 +74,7 @@ export function Card({
           <span className="text-white font-medium z-50">
             Unsere Leistungen in
           </span>
-          <span className="text-blue-500 text-lg font-medium z-50">
+          <span className="text-blueRuin text-lg font-medium z-50">
             {name} Stadt
           </span>
         </div>

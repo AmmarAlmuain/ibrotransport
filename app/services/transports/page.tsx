@@ -19,11 +19,11 @@ export default function nh() {
           <div className="w-full max-w-lg p-5 flex flex-col gap-y-5">
             <div>
               <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
-                Transports
+                Transport
               </span>
             </div>
             <h1 className="-h1 text-white max-sm:text-2xl drop-shadow">
-              Transports
+              Transporte
             </h1>
           </div>
         </div>
@@ -43,8 +43,7 @@ export default function nh() {
             </div>
             <div className="flex-1 md:order-2">
               <h3 className="font-semibold text-lg lg:text-xl mb-2">
-                TransportsTransports in Linz, Wels, Graz, Salzburg und ganz
-                Österreich
+                Transports in ganz Österreich
               </h3>
               <div className="text-sm lg:text-base">
                 <p>

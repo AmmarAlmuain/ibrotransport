@@ -69,7 +69,7 @@ export default function Nav() {
         <div className="w-full">
           <div className="w-full h-20 max-md:h-14 bg-white flex justify-between items-center">
             <ul className="-center gap-x-5 max-lg:hidden h-full">
-              <div className="w-72 bg-coarseWool -center h-full">
+              <div className="w-64 bg-coarseWool -center h-full">
                 <Logo />
               </div>
               <NavItem name="Home" href="/" />

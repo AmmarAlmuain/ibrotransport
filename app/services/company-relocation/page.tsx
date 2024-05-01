@@ -43,7 +43,7 @@ export default function nh() {
             </div>
             <div className="flex-1 md:order-2">
               <h3 className="font-semibold text-lg lg:text-xl mb-2">
-                Firmenumzug in Linz, Wels, Graz, Salzburg und ganz Österreich
+                Firmenumzug in ganz Österreich
               </h3>
               <div className="text-sm lg:text-base">
                 <p>
