@@ -28,10 +28,10 @@ export default function Footer() {
               <li className="text-xl text-white font-medium">Menu</li>
             </div>
             <FooterItem name="Home" href="/" />
-            <FooterItem name="About Us" href="/about-us" />
-            <FooterItem name="Contact" href="/contact" />
-            <FooterItem name="Privacy Policy" href="/" />
-            <FooterItem name="Terms and Conditions" href="/" />
+            <FooterItem name="Über uns" href="/about-us" />
+            <FooterItem name="Kontakt" href="/contact" />
+            <FooterItem name="Datenschutzrichtlinie" href="/" />
+            <FooterItem name="Nutzungsbedingungen" href="/" />
           </ul>
           <ul className="text-gray-300 flex flex-col gap-y-4 max-lg:w-full">
             <div>
@@ -45,7 +45,7 @@ export default function Footer() {
               name="Firmenumzug"
               href="/services/company-relocation"
             />
-            <FooterItem name="Transports" href="/services/transports" />
+            <FooterItem name="Transporte" href="/services/transports" />
             <FooterItem name="Montage" href="/services/assembly" />
             <FooterItem
               name="Möbelabholung"

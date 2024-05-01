@@ -81,8 +81,8 @@ export function Reach() {
         </div>
         <div className="w-full lg:max-w-2xl flex flex-col gap-y-5">
           <Select
-            label="Work type"
-            placeholder="Select an work type"
+            label="Arbeitstyp"
+            placeholder="Wählen Sie einen Arbeitstyp aus"
             radius="none"
             onChange={(value) => {
               body.workType = value.target.value;
@@ -100,7 +100,7 @@ export function Reach() {
               isRequired
               label="Name"
               radius="none"
-              placeholder="Your Name"
+              placeholder="Ihr Name"
               onChange={(value) => {
                 body.name = value.target.value;
               }}
@@ -110,7 +110,7 @@ export function Reach() {
               isRequired
               label="Email"
               radius="none"
-              placeholder="Your Email"
+              placeholder="deine E-Mail"
               onChange={(value) => {
                 body.email = value.target.value;
               }}
@@ -120,9 +120,9 @@ export function Reach() {
             <Input
               type="text"
               isRequired
-              label="Phone Number"
+              label="Telefonnummer"
               radius="none"
-              placeholder="Your Phone Number"
+              placeholder="deine Telefonnummer"
               onChange={(value) => {
                 body.phone = value.target.value;
               }}
@@ -130,9 +130,9 @@ export function Reach() {
             <Input
               type="text"
               isRequired
-              label="City"
+              label="Stadt"
               radius="none"
-              placeholder="Your City"
+              placeholder="deine Stadt"
               onChange={(value) => {
                 body.city = value.target.value;
               }}
@@ -140,8 +140,8 @@ export function Reach() {
           </div>
           <Textarea
             isRequired
-            label="Message"
-            placeholder="Your Message"
+            label="Nachricht"
+            placeholder="Ihre Nachricht"
             radius="none"
             onChange={(value) => {
               body.message = value.target.value;
@@ -155,7 +155,7 @@ export function Reach() {
             color="primary"
             radius="full"
           >
-            Submit Message
+            Nachricht abschicken
           </Button>
         </div>
       </section>

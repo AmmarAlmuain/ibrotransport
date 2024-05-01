@@ -39,7 +39,7 @@ export default function Nav() {
                           href="/services/company-relocation"
                         />
                         <MobileNavItem
-                          name="Transports"
+                          name="Transporte"
                           href="/services/transports"
                         />
                         <MobileNavItem
@@ -96,7 +96,7 @@ export default function Nav() {
                         href="/services/company-relocation"
                       />
                       <MobileNavItem
-                        name="Transports"
+                        name="Transporte"
                         href="/services/transports"
                       />
                       <MobileNavItem name="Montage" href="/services/assembly" />

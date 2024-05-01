@@ -24,11 +24,11 @@ export default function nh() {
           <div className="w-full max-w-lg p-5 flex flex-col gap-y-5">
             <div>
               <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
-                About Us
+                Über uns
               </span>
             </div>
             <h1 className="-h1 text-white max-sm:text-2xl drop-shadow">
-              Our company
+              Unser Unternehmen
             </h1>
           </div>
         </div>
@@ -38,13 +38,13 @@ export default function nh() {
           href="/services/company-relocation"
           comp={<BuildingIcon />}
           name="Firmenumzug"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
+          description="Unser Service für Firmenumzüge ist speziell darauf ausgelegt, diese Herausforderungen effizient und professionell zu meistern."
         />
         <Card
           href="/services/private-relocation"
           comp={<HousesIcon />}
           name="Privatumzug"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
+          description="Unser erfahrenes Team begleitet Sie von der Planung bis zur Ausführung Ihres Umzugs, um sicherzustellen, dass alles reibungslos und ohne Stress verläuft"
         />
         <Card
           href="/services/transports"
@@ -57,14 +57,14 @@ export default function nh() {
               </div>
             </div>
           }
-          name="Transports"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
+          name="Transporte"
+          description="Wir verstehen, dass jedes Item, ob robust oder besonders sensibel, eine individuelle Behandlung erfordert, um es optimal auf den Transport vorzubereiten"
         />
         <Card
           href="/services/assembly"
           comp={<TruckIcon />}
           name="Montage"
-          description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, natus quo neque itaque repellendus quas."
+          description="Unsere erfahrenen Fachkräfte meistern jede Montageaufgabe mit Präzision und Sorgfalt, von einfachen Regalen bis hin zu komplexen Möbelstücken"
         />
       </div>
       <div className="flex w-full h-full max-xl:flex-col">
@@ -79,44 +79,49 @@ export default function nh() {
           <div className="w-full flex-col justify-center items-start space-y-10 p-20 max-sm:px-5">
             <div className="max-sm:w-full max-sm:text-center">
               <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
-                About Us
+                Über uns
               </span>
             </div>
             <h1 className="-h1 max-sm:text-center">
-              A professional <br /> transportation business
+              Ein Professioneller <br /> Transportunternehmen
             </h1>
             <p className="text-lg font-light">
-              Sometimes goods can arrive early when they are being brought into
-              the country. Quisque sed molestie nisl. Integer consequat risus.
+              Unser Engagement für Exzellenz und Kundenzufriedenheit steht im
+              Mittelpunkt unseres Unternehmens. Wir verstehen die Bedeutung von
+              pünktlicher Lieferung,
             </p>
             <p className="text-lg font-light">
-              Quisque sed molestie nisl. Integer consequat risus. With over 80
-              trucks in our fleet, road transport is our speciality and best
-              freight option
+              Effizienz und Sicherheit und setzen alles daran, Ihren
+              Transportbedarf mit höchster Professionalität zu erfüllen.
             </p>
             <Accordion>
               <AccordionItem
                 key="1"
-                aria-label="Road Transport"
-                title="Road Transport"
+                aria-label="Möbelabholung"
+                title="Möbelabholung"
                 className="font-bold"
               >
                 <p className="font-light">
-                  Quisque sed molestie nisl. Integer consequat risus. With over
-                  80 trucks in our fleet, road transport is our speciality and
-                  best freight option.
+                  ibrotransport bietet Ihnen eine zuverlässige und garantierte
+                  Lösung für alle Grundlagen der Annahme und Entsorgung alter
+                  Möbel. Kontaktieren Sie uns noch heute für Reservierungen oder
+                  weitere Informationen!ibrotransport bietet Ihnen eine
+                  zuverlässige und garantierte Lösung für alle Grundlagen der
+                  Annahme und Entsorgung alter Möbel. Kontaktieren Sie uns noch
+                  heute für Reservierungen oder weitere Informationen!
                 </p>
               </AccordionItem>
               <AccordionItem
                 key="2"
-                aria-label="Sea Cargo"
-                title="Sea Cargo"
+                aria-label="Packservice"
+                title="Packservice"
                 className="font-bold"
               >
                 <p className="font-light">
-                  Quisque sed molestie nisl. Integer consequat risus. With over
-                  80 trucks in our fleet, road transport is our speciality and
-                  best freight option.
+                  Unser Team sorgt für eine maßgeschneiderte Verpackung, die der
+                  Art und Größe Ihrer Sendung entspricht. Ob Möbel, Elektronik
+                  oder zerbrechliche Güter – wir bieten die perfekte Verpackung
+                  zum Schutz Ihrer Sendung.
                 </p>
               </AccordionItem>
             </Accordion>
@@ -127,12 +132,13 @@ export default function nh() {
         <div className="w-full h-full max-xl:order-2">
           <div className="flex-col space-y-10 max-sm:items-center flex justify-center items-start max-sm:px-5 p-20">
             <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
-              Our Mission
+              Hochqualifizierte Fahrer
             </span>
             <p className="text-[28px] max-sm:text-center max-sm:text-lg">
-              &ldquo;We are able to handle any size load, to-and-from anywhere
-              and within any service time frame has made you our best and bring
-              to the table win-win..
+              Unsere Fahrer sind sorgfältig ausgewählt und hochqualifiziert. Sie
+              verfügen über umfangreiche Erfahrung im Straßenverkehr und sind
+              bestens geschult, um Ihre Fracht sicher und termingerecht zu
+              transportieren.
             </p>
           </div>
         </div>
@@ -154,20 +160,18 @@ export default function nh() {
         </div>
         <div className="w-full -center">
           <div className="flex justify-center items-center flex-col gap-y-10 max-sm:px-5 p-20">
-            <h3 className="text-4xl text-center">
-              We give you complete control of your shipments.
-            </h3>
+            <h3 className="text-4xl text-center">Unsere vorteile</h3>
             <Card2
               no="1"
-              href="/services/furniture-pick-up"
-              name="Logistic Solution"
-              description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
+              href="#reach"
+              name="Flexibilität und Zuverlässigkeit"
+              description="Egal, ob es sich um einen lokalen Transport oder eine Fernlieferung handelt, wir passen unsere Dienstleistungen an Ihre Anforderungen an. Unsere Kunden können sich darauf verlassen, dass ihre Fracht sicher und rechtzeitig an ihrem Bestimmungsort ankommt."
             />
             <Card2
               no="2"
-              href="/services/pack-service"
-              name="Logistic Solution"
-              description="Praesent eu rhoncus nibh. Quisque tincidunt, nisi in enetis commodo, neque quam pharetra dolor."
+              href="#reach"
+              name="Kundenservice"
+              description="Unser Team steht Ihnen jederzeit zur Verfügung, um Ihre Fragen zu beantworten und maßgeschneiderte Transportlösungen anzubieten. Wir legen großen Wert auf offene Kommunikation und arbeiten eng mit unseren Kunden zusammen, um ihre Erwartungen zu übertreffen"
             />
           </div>
         </div>
@@ -196,7 +200,7 @@ const Card = function Card({
           <div>{comp}</div>
           <div className="-center flex-col gap-y-2.5">
             <h1 className="text-2xl font-medium cursor-pointer">{name}</h1>
-            <p className="text-center">{description}</p>
+            <p className="text-center w-56">{description}</p>
           </div>
           <div className="w-12 h-12 -center rounded-full group-hover:bg-blueRuin group-hover:border-none -center border border-gray-300">
             <span className="group-hover:hidden">

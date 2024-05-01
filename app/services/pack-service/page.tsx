@@ -19,7 +19,7 @@ export default function nh() {
           <div className="w-full max-w-lg p-5 flex flex-col gap-y-5">
             <div>
               <span className="text-white px-2.5 py-1 border-l-5 border-blueRuin bg-black/50">
-                Pack service
+                Pakservice
               </span>
             </div>
             <h1 className="-h1 text-white max-sm:text-2xl drop-shadow">
